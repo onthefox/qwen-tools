@@ -1,0 +1,52 @@
+{
+  "name": "@qwen-tools/core",
+  "version": "0.1.0",
+  "description": "Core library for Qwen3-Coder integration with AST-grep and agentic workflows",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./patterns": {
+      "import": "./dist/patterns/index.js",
+      "types": "./dist/patterns/index.d.ts"
+    },
+    "./ast-grep": {
+      "import": "./dist/ast-grep/index.js",
+      "types": "./dist/ast-grep/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "qwen",
+    "core",
+    "ast-grep",
+    "code-analysis",
+    "llm",
+    "agentic"
+  ],
+  "dependencies": {
+    "@qwen-tools/skills": "workspace:*",
+    "axios": "^1.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.0"
+  }
+}
