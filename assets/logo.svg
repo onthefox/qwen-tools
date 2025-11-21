@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f8fafc" stroke="url(#grad1)" stroke-width="2"/>
+  
+  <!-- Neural network brain -->
+  <g id="brain">
+    <!-- Left brain hemisphere -->
+    <circle cx="70" cy="85" r="28" fill="#06B6D4" opacity="0.3"/>
+    <circle cx="70" cy="85" r="24" fill="none" stroke="url(#grad1)" stroke-width="2"/>
+    
+    <!-- Right brain hemisphere -->
+    <circle cx="130" cy="85" r="28" fill="#0891B2" opacity="0.3"/>
+    <circle cx="130" cy="85" r="24" fill="none" stroke="url(#grad1)" stroke-width="2"/>
+    
+    <!-- Connection between hemispheres -->
+    <line x1="95" y1="85" x2="105" y2="85" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Neural nodes - left -->
+    <circle cx="50" cy="75" r="4" fill="url(#grad2)"/>
+    <circle cx="70" cy="60" r="4" fill="url(#grad2)"/>
+    <circle cx="90" cy="70" r="4" fill="url(#grad2)"/>
+    <circle cx="65" cy="105" r="4" fill="url(#grad2)"/>
+    
+    <!-- Neural nodes - right -->
+    <circle cx="150" cy="75" r="4" fill="url(#grad1)"/>
+    <circle cx="130" cy="60" r="4" fill="url(#grad1)"/>
+    <circle cx="110" cy="70" r="4" fill="url(#grad1)"/>
+    <circle cx="135" cy="105" r="4" fill="url(#grad1)"/>
+    
+    <!-- Connection lines -->
+    <line x1="50" y1="75" x2="70" y2="60" stroke="url(#grad2)" stroke-width="1.5" opacity="0.7"/>
+    <line x1="70" y1="60" x2="90" y2="70" stroke="url(#grad2)" stroke-width="1.5" opacity="0.7"/>
+    <line x1="150" y1="75" x2="130" y2="60" stroke="url(#grad1)" stroke-width="1.5" opacity="0.7"/>
+    <line x1="130" y1="60" x2="110" y2="70" stroke="url(#grad1)" stroke-width="1.5" opacity="0.7"/>
+  </g>
+  
+  <!-- Code brackets bottom left -->
+  <g id="code-left">
+    <path d="M 35 130 L 45 140 L 35 150" fill="none" stroke="url(#grad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Code brackets bottom right -->
+  <g id="code-right">
+    <path d="M 165 130 L 155 140 L 165 150" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Gear/tool symbol center bottom -->
+  <g id="tool">
+    <circle cx="100" cy="150" r="8" fill="none" stroke="url(#grad1)" stroke-width="1.5"/>
+    <circle cx="100" cy="150" r="4" fill="url(#grad1)"/>
+    <!-- Gear teeth -->
+    <line x1="100" y1="140" x2="100" y2="135" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="100" y1="160" x2="100" y2="165" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="112" y1="150" x2="117" y2="150" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="88" y1="150" x2="83" y2="150" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Project name text -->
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0F172A">qwen-tools</text>
+</svg>
